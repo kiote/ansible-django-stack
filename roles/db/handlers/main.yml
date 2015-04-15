@@ -12,4 +12,5 @@
   action: file dest=/tmp/mysql_secure_installation state=absent
 
 - name: restart mysql
+  sudo: yes
   action: service name=mysql state=restarted enabled=yes
