@@ -13,3 +13,6 @@
   action: template src=client.cnf.j2 dest=/etc/mysql/conf.d/client.cnf
   notify:
     - restart mysql
+
+- name: create mysql user ahs
+  mysql_user: name=ahs password=12345 priv=*.*:ALL state=present

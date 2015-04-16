@@ -11,6 +11,8 @@
     - openssl
     - libssl-dev
     - libssl-doc
+    - python-dev
+    - libmysqlclient-dev
   tags: packages
 
 - name: Install base packages
@@ -29,3 +31,7 @@
 - name: Install virtualenv
   pip: name=virtualenv
   tags: packages
+
+- name: Install mysqldb module
+  apt: pkg=python-mysqldb state=installed
+#   pip: name=MySQL-python

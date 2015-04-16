@@ -13,7 +13,6 @@
     - env_vars/local.yml
 
   roles:
-    # - base
+    - base
     - db
     # - web
-    # - memcached
