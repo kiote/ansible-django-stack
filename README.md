@@ -13,8 +13,6 @@ Default settings are stored in ```roles/role_name/vars/main.yml```.  Environment
 
 **Tested with OS:** Ubuntu 12.04.4 LTS x64
 
-**Tested with Cloud Providers:** Amazon, Rackspace, Digital Ocean
-
 ## Getting Started
 A quick way to get started is with Vagrant and VirtualBox.
 
