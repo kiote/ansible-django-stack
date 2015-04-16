@@ -16,4 +16,3 @@
     - base
     - db
     - web
-    - memcached

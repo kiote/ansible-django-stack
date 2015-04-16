@@ -7,7 +7,6 @@ Ansible Playbook designed for environments running a Django app.  It can install
 - MySQL
 - Supervisor
 - Virtualenv
-- Celery
 
 Default settings are stored in ```roles/role_name/vars/main.yml```.  Environment-specific settings are in the ```env_vars``` directory.
 

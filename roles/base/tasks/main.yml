@@ -34,4 +34,3 @@
 
 - name: Install mysqldb module
   apt: pkg=python-mysqldb state=installed
-#   pip: name=MySQL-python
