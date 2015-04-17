@@ -5,20 +5,6 @@ db_user: "{{ application_name }}"
 db_name: "{{ application_name }}"
 db_password: password
 
-
-# Gunicorn settings. For the number of workers, a good rule to follow is
-# 2 x number of CPUs + 1
-gunicorn_num_workers: 1
-
-# Setting this to 1 will restart the Gunicorn process each time
-# you make a request, basically reloading the code. Very handy
-# when developing. Set to 0 for unlimited requests (default).
-gunicorn_max_requests: 1
-
-
-# Nginx settings.
-nginx_server_name: 192.168.33.15
-
 # SMTP settings.
 smtp_host: smtp.gmail.com
 smtp_user: admin@example.com
