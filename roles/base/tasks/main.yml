@@ -11,8 +11,7 @@
     - openssl
     - libssl-dev
     - libssl-doc
-    - python-dev
-    - libmysqlclient-dev
+    - libffi-dev
   tags: packages
 
 - name: Install base packages
@@ -25,6 +24,7 @@
     - python-dev
     - python-pip
     - python-pycurl
+    - libmysqlclient-dev
     - supervisor
   tags: packages
 
@@ -32,5 +32,11 @@
   pip: name=virtualenv
   tags: packages
 
+- name: Ssl libraries 1
+  pip: name=requests[security] version=2.5.3
+
 - name: Install mysqldb module
   apt: pkg=python-mysqldb state=installed
+
+- name: Intall mysql-python module
+  pip: name=MySQL-python
