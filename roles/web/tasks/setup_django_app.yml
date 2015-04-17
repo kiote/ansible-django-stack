@@ -13,12 +13,5 @@
   when: run_django_south_migration
   tags: django.migrate
 
-# - name: Run Django collectstatic
-#   django_manage:
-#     command: collectstatic
-#     app_path: "/webapps/housingsurvey/housing-survey"
-#     virtualenv: "{{ virtualenv_path }}"
-#     settings: "{{ django_settings_file }}"
-#   environment: django_environment
-#   when: run_django_collectstatic
-#   tags: django.collectstatic
+- name: Create Django superuser
+  command: echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'pass')" | ./manage.py shell
