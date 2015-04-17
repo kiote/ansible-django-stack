@@ -16,3 +16,6 @@
 
 - name: create mysql user ahs
   mysql_user: name=ahs password=12345 priv=*.*:ALL state=present
+
+- name: create mysql database
+  mysql_db: name=housing_survey login_user=ahs login_password=12345
