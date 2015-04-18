@@ -4,6 +4,9 @@
   command: virtualenv {{ virtualenv_path }} --no-site-packages
            creates={{ virtualenv_path }}/bin/activate
 
+- name: Create the application log dir
+  command: mkdir -p {{ application_log_dir }}
+
 - name: Create the application log file
   command: touch {{ application_log_file }}
            creates={{ application_log_file }}
