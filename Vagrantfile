@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Shared folder from the host machine to the guest machine. Uncomment the line
   # below to enable it.
-  config.vm.synced_folder "./../housing_survey", "/webapps/housing_survey", nfs: true
+  config.vm.synced_folder "./../housing_survey", "/webapps/housing_survey/housing-survey"
 
   # Ansible provisioner.
   config.vm.provision "ansible" do |ansible|

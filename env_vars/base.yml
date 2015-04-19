@@ -3,7 +3,7 @@
 git_repo: https://github.com/kiote/housing_survey.git
 
 project_name: housing-survey
-application_name: housingsurvey
+application_name: housing_survey
 
 utf8: true
 mysqld:
