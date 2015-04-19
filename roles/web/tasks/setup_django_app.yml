@@ -3,6 +3,9 @@
 - name: Install packages required by the Django app inside virtualenv
   pip: virtualenv={{ virtualenv_path }} requirements={{ requirements_file }}
 
+- name: Create Django migrations
+  raw: cd {{ virtualenv_path }}; source bin/activate; cd {{ project_path }}; python manage.py makemigrations
+
 - name: Run Django migrations
   django_manage:
     command: migrate
@@ -12,6 +15,3 @@
   environment: django_environment
   when: run_django_south_migration
   tags: django.migrate
-
-- name: Create Django superuser
-  command: echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'pass')" | ./manage.py shell
