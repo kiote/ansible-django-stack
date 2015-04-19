@@ -46,3 +46,5 @@ python manage.py createsuperuser
 # run Django
 python manage.py runserver 0.0.0.0:8080
 ```
+
+Open your browser at http://192.168.33.15:8080/admin, enter login and password you've created before. Enjoy!
