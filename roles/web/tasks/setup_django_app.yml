@@ -15,3 +15,9 @@
   environment: django_environment
   when: run_django_south_migration
   tags: django.migrate
+
+- name: Create Django admin
+  raw: cd {{ virtualenv_path }}; source bin/activate; cd {{ project_path }}; python manage.py loaddata data/initial/initial_data.json
+
+- name: Create Django admin session
+  raw: cd {{ virtualenv_path }}; source bin/activate; cd {{ project_path }}; python manage.py loaddata data/initial/initial_sessions.json
