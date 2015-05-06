@@ -6,6 +6,7 @@ project_name: housing-survey
 application_name: housing_survey
 
 utf8: true
+mysql_root_password: 12345
 mysqld:
   bind_address: 127.0.0.1
   key_buffer_size: 16M
